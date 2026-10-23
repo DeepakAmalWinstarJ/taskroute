@@ -1,0 +1,49 @@
+{
+ "pattern_tag": "#tool-selection",
+ "agentcore_features": [],
+ "pattern_doc": "REUSABLE DECISION PATTERN: TOOL SELECTION  (#tool-selection)\n\nWhat it does\n    TaskRoute AI uses Strands Decider 2B to route user questions to the most appropriate tool.\n    Given a programming-related question, the decider selects exactly one of three tools:\n    - debug_tool: programming errors and debugging\n    - learn_tool: explanations of programming concepts\n    - career_tool: interview and placement preparation\n    \n    If confidence is too low (< 0.6), the agent keeps all tools and asks the LLM to choose.\n    If the input is unclear, the agent asks a clarifying question instead of guessing.\n\nTyped questions and options\n    tool (choice): one option per tool, described by the tool's own docstring, plus \"none\"\n    (\"no tool is needed, answer directly\").\n\nWiring\n    TaskRouter is integrated into HackathonAgent in agent/agent.py. It sits between the\n    user message and the LLM agent, selecting which tools to provide based on the decider's\n    decision.\n\nHow to reuse it\n    Copy this file, change TOOLS to your own tools, and adjust the threshold as needed.\n    The pattern automatically reads tool descriptions from docstrings.",
+ "questions_code": "QUESTIONS = {\n    \"tool\": Decider.choice(\n        \"Which tool should handle this programming-related request?\",\n        {\n            \"debug_tool\": \"programming errors and debugging\",\n            \"learn_tool\": \"explanations of programming concepts\", \n            \"career_tool\": \"interview and placement preparation\",\n            \"none\": \"no tool is needed; the assistant can answer directly\"\n        }\n    )\n}",
+ "agent_md": "# Use case\n\n**TaskRoute AI: A smart task-routing assistant for programming help.**\n\n- **Pitch:** An AI assistant that intelligently routes programming questions to specialized tools using Strands Decider 2B for accurate tool selection.\n- **Who it is for:** Developers, students, and job seekers who need programming help but don't know which type of assistance they need.\n- **Features:**\n  - Automatically categorizes questions into debugging, learning, or career advice\n  - Uses Strands Decider 2B for fast, accurate tool selection\n  - Provides specialized assistance from three targeted tools\n  - Asks clarifying questions when uncertain instead of guessing\n  - Clean web interface with real-time decision visualization\n  - Deployed on Amazon Bedrock AgentCore Runtime\n- **The decision handed to Strands Decider 2B:** Which specialized tool should handle this programming question? (`#tool-selection`)\n- **Why a decision model:** Tool selection needs to be fast, consistent, and calibrated. A decision model provides probabilities that allow intelligent fallback (keeping all tools when unsure) and prevents wrong tool usage.\n- **Amazon Bedrock:** The conversation and tool use (Qwen3.5:4b locally during development, Amazon Nova Pro for deployment).",
+ "llm_provider_local_runs": "ugmdu",
+ "agent_name": "TaskRoute AI: Smart programming assistance router",
+ "bench": {
+  "summary": {
+   "decider": {
+    "accuracy": 0.75,
+    "decisions": 12,
+    "per_question": {
+     "tool": 0.75
+    },
+    "latency_p50_ms": 2761.9,
+    "latency_p95_ms": 4295.4,
+    "usd_per_1k_decisions": 0.035,
+    "confident_share": 0.25,
+    "accuracy_when_confident": 1.0,
+    "sent_to_human_at_threshold": 9
+   },
+   "llm": {
+    "accuracy": 0.9167,
+    "decisions": 12,
+    "per_question": {
+     "tool": 0.9167
+    },
+    "latency_p50_ms": 11304.1,
+    "latency_p95_ms": 13873.8,
+    "usd_per_1k_decisions": 0.0,
+    "confident_share": 1.0,
+    "accuracy_when_confident": 0.9167,
+    "sent_to_human_at_threshold": 0
+   },
+   "speedup_p50": 4.09
+  },
+  "decider_model": "strands-decider-2b-hobson-v19",
+  "decider_mode": "ugmdu",
+  "llm_model": "qwen3.5-4b",
+  "cases": 12,
+  "split": "test",
+  "threshold": 0.7
+ },
+ "bench_table": "Decider: strands-decider-2b-hobson-v19 (ugmdu). 12 labelled cases, 12 decisions.\n\n| | Strands Decider 2B | qwen3.5-4b |\n|---|---|---|\n| Accuracy | 75.0% | 91.7% |\n| Latency p50 per decision | 2762 ms | 11304 ms |\n| Latency p95 | 4295 ms | 13874 ms |\n| Cost per 1,000 decisions | $0.0350 | $0.0000 |\n| Answered alone at confidence >= 0.7 | 25% | 100% |\n| Accuracy when confident | 100.0% | 91.7% |\n\nAt the median the decider was 4.1x faster than the LLM.\n",
+ "repo_url": "https://github.com/DeepakAmalWinstarJ/taskroute",
+ "video_url": ""
+}
