@@ -1,0 +1,24 @@
+{"state": "User request: I'm getting a syntax error in my Python code: missing parentheses", "expected": {"tool": "debug_tool"}, "split": "tune"}
+{"state": "User request: Can you explain what recursion is in programming?", "expected": {"tool": "learn_tool"}, "split": "tune"}
+{"state": "User request: How should I prepare for a technical interview at Amazon?", "expected": {"tool": "career_tool"}, "split": "tune"}
+{"state": "User request: My code has an IndexError: list index out of range", "expected": {"tool": "debug_tool"}, "split": "test"}
+{"state": "User request: What's the difference between arrays and linked lists?", "expected": {"tool": "learn_tool"}, "split": "test"}
+{"state": "User request: What should I include in my software engineer resume?", "expected": {"tool": "career_tool"}, "split": "test"}
+{"state": "User request: TypeError: can't multiply sequence by non-int of type 'str'", "expected": {"tool": "debug_tool"}, "split": "tune"}
+{"state": "User request: Explain how hash tables work", "expected": {"tool": "learn_tool"}, "split": "tune"}
+{"state": "User request: How do I negotiate a salary offer for a developer position?", "expected": {"tool": "career_tool"}, "split": "tune"}
+{"state": "User request: ModuleNotFoundError: No module named 'requests'", "expected": {"tool": "debug_tool"}, "split": "test"}
+{"state": "User request: What is polymorphism in object-oriented programming?", "expected": {"tool": "learn_tool"}, "split": "test"}
+{"state": "User request: What are common behavioral interview questions for tech roles?", "expected": {"tool": "career_tool"}, "split": "test"}
+{"state": "User request: NameError: name 'my_variable' is not defined", "expected": {"tool": "debug_tool"}, "split": "tune"}
+{"state": "User request: How does garbage collection work in Java?", "expected": {"tool": "learn_tool"}, "split": "tune"}
+{"state": "User request: Should I get AWS certification for a cloud engineer role?", "expected": {"tool": "career_tool"}, "split": "tune"}
+{"state": "User request: ValueError: invalid literal for int() with base 10", "expected": {"tool": "debug_tool"}, "split": "test"}
+{"state": "User request: What are design patterns and why are they useful?", "expected": {"tool": "learn_tool"}, "split": "test"}
+{"state": "User request: How many LeetCode problems should I solve before interviews?", "expected": {"tool": "career_tool"}, "split": "test"}
+{"state": "User request: Help with programming", "expected": {"tool": "none"}, "split": "tune"}
+{"state": "State request: I need help with my code", "expected": {"tool": "none"}, "split": "test"}
+{"state": "User request: My program isn't working and I have an interview tomorrow", "expected": {"tool": "debug_tool"}, "split": "tune"}
+{"state": "User request: Can you teach me programming and help with my resume?", "expected": {"tool": "learn_tool"}, "split": "test"}
+{"state": "User request: Error in code and need interview tips", "expected": {"tool": "debug_tool"}, "split": "tune"}
+{"state": "User request: Programming concepts for job preparation", "expected": {"tool": "learn_tool"}, "split": "test"}

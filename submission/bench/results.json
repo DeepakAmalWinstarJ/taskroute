@@ -1,0 +1,306 @@
+{
+ "decider_model": "strands-decider-2b-hobson-v19",
+ "rows": [
+  {
+   "i": 0,
+   "expected": {
+    "tool": "debug_tool"
+   },
+   "decider": {
+    "tool": {
+     "label": "debug_tool",
+     "confidence": 0.9574
+    }
+   },
+   "decider_ms": 1694.3117000009806,
+   "decider_server_ms": 745.8,
+   "llm": {
+    "tool": {
+     "label": "debug_tool",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 14401.219900002616,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 1,
+   "expected": {
+    "tool": "learn_tool"
+   },
+   "decider": {
+    "tool": {
+     "label": "learn_tool",
+     "confidence": 0.6806
+    }
+   },
+   "decider_ms": 1437.6042000003508,
+   "decider_server_ms": 741.5,
+   "llm": {
+    "tool": {
+     "label": "learn_tool",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 10600.478699998348,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 2,
+   "expected": {
+    "tool": "career_tool"
+   },
+   "decider": {
+    "tool": {
+     "label": "none",
+     "confidence": 0.6842
+    }
+   },
+   "decider_ms": 1887.9407999993418,
+   "decider_server_ms": 814.0,
+   "llm": {
+    "tool": {
+     "label": "career_tool",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 10933.417600001121,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 3,
+   "expected": {
+    "tool": "debug_tool"
+   },
+   "decider": {
+    "tool": {
+     "label": "debug_tool",
+     "confidence": 0.9032
+    }
+   },
+   "decider_ms": 1856.1403999992763,
+   "decider_server_ms": 794.3,
+   "llm": {
+    "tool": {
+     "label": "debug_tool",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 11350.66039999947,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 4,
+   "expected": {
+    "tool": "learn_tool"
+   },
+   "decider": {
+    "tool": {
+     "label": "learn_tool",
+     "confidence": 0.6631
+    }
+   },
+   "decider_ms": 3384.615599999961,
+   "decider_server_ms": 785.7,
+   "llm": {
+    "tool": {
+     "label": "learn_tool",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 10771.862900000997,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 5,
+   "expected": {
+    "tool": "career_tool"
+   },
+   "decider": {
+    "tool": {
+     "label": "career_tool",
+     "confidence": 0.5482
+    }
+   },
+   "decider_ms": 1428.9575000002515,
+   "decider_server_ms": 740.5,
+   "llm": {
+    "tool": {
+     "label": "career_tool",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 11642.601300001843,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 6,
+   "expected": {
+    "tool": "debug_tool"
+   },
+   "decider": {
+    "tool": {
+     "label": "debug_tool",
+     "confidence": 0.9139
+    }
+   },
+   "decider_ms": 2761.920099997951,
+   "decider_server_ms": 818.4,
+   "llm": {
+    "tool": {
+     "label": "debug_tool",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 11565.91489999846,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 7,
+   "expected": {
+    "tool": "learn_tool"
+   },
+   "decider": {
+    "tool": {
+     "label": "learn_tool",
+     "confidence": 0.5859
+    }
+   },
+   "decider_ms": 4894.244300001446,
+   "decider_server_ms": 744.5,
+   "llm": {
+    "tool": {
+     "label": "learn_tool",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9957.65549999851,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 8,
+   "expected": {
+    "tool": "career_tool"
+   },
+   "decider": {
+    "tool": {
+     "label": "career_tool",
+     "confidence": 0.5053
+    }
+   },
+   "decider_ms": 1439.964900000632,
+   "decider_server_ms": 802.9,
+   "llm": {
+    "tool": {
+     "label": "career_tool",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9887.275500001124,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 9,
+   "expected": {
+    "tool": "none"
+   },
+   "decider": {
+    "tool": {
+     "label": "debug_tool",
+     "confidence": 0.5986
+    }
+   },
+   "decider_ms": 4295.4019000026165,
+   "decider_server_ms": 723.1,
+   "llm": {
+    "tool": {
+     "label": "debug_tool",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 11304.114499998832,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 10,
+   "expected": {
+    "tool": "learn_tool"
+   },
+   "decider": {
+    "tool": {
+     "label": "none",
+     "confidence": 0.4816
+    }
+   },
+   "decider_ms": 4080.0866999998107,
+   "decider_server_ms": 1856.4,
+   "llm": {
+    "tool": {
+     "label": "learn_tool",
+     "confidence": 0.9
+    }
+   },
+   "llm_ms": 13873.765700001968,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 11,
+   "expected": {
+    "tool": "learn_tool"
+   },
+   "decider": {
+    "tool": {
+     "label": "learn_tool",
+     "confidence": 0.6565
+    }
+   },
+   "decider_ms": 3651.936400001432,
+   "decider_server_ms": 807.5,
+   "llm": {
+    "tool": {
+     "label": "learn_tool",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9607.118100000662,
+   "llm_cost": 0.0
+  }
+ ],
+ "summary": {
+  "decider": {
+   "accuracy": 0.75,
+   "decisions": 12,
+   "per_question": {
+    "tool": 0.75
+   },
+   "latency_p50_ms": 2761.9,
+   "latency_p95_ms": 4295.4,
+   "usd_per_1k_decisions": 0.035,
+   "confident_share": 0.25,
+   "accuracy_when_confident": 1.0,
+   "sent_to_human_at_threshold": 9
+  },
+  "llm": {
+   "accuracy": 0.9167,
+   "decisions": 12,
+   "per_question": {
+    "tool": 0.9167
+   },
+   "latency_p50_ms": 11304.1,
+   "latency_p95_ms": 13873.8,
+   "usd_per_1k_decisions": 0.0,
+   "confident_share": 1.0,
+   "accuracy_when_confident": 0.9167,
+   "sent_to_human_at_threshold": 0
+  },
+  "speedup_p50": 4.09
+ },
+ "threshold": 0.7,
+ "llm_model": "qwen3.5-4b",
+ "llm_provider": "ugmdu",
+ "llm_where": "AWS User Group Madurai cloud (qwen3.5-4b)",
+ "decider_url": "https://da25tnxy06gjk.cloudfront.net",
+ "decider_mode": "ugmdu",
+ "ran_at": 1792765407.9173663,
+ "split": "test"
+}

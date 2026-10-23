@@ -1,0 +1,21 @@
+﻿title: "TaskRoute AI: Smart routing of programming questions with Strands Decider 2B"
+pitch: "An AI assistant that intelligently routes programming questions to specialized tools using Strands Decider 2B."
+features:
+  - "automatically categorizes questions into debugging, learning, or career advice"
+  - "uses Strands Decider 2B for fast, accurate tool selection with calibrated confidence"
+  - "asks clarifying questions when uncertain instead of guessing"
+  - "clean web interface with real-time decision visualization"
+  - "runs on Amazon Bedrock AgentCore Runtime"
+eager: false
+intro: "TaskRoute AI helps programmers get the right kind of assistance. It uses Strands Decider 2B to select exactly one of three specialized tools for each question, and asks for clarification when it's unsure."
+intro_normal: "TaskRoute AI runs on Amazon Bedrock AgentCore Runtime and uses Strands Decider 2B to route programming questions to the most appropriate specialized tool."
+turns:
+  - say: "I'm getting a syntax error in my Python code"
+    narrate: "A clear debugging question that should route to the debug_tool."
+  - say: "Can you explain what object-oriented programming is?"
+    narrate: "A learning question about programming concepts for the learn_tool."
+  - say: "How should I prepare for a software engineering interview?"
+    narrate: "A career advice question for the career_tool."
+  - say: "I need help with programming"
+    narrate: "An ambiguous question where the decider might have low confidence."
+outro: "Fast, calibrated tool selection with Strands Decider 2B, specialized assistance for programming questions, and intelligent fallback when unsure."
